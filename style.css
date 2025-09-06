@@ -421,6 +421,89 @@ span {
     transform: scale(1.05);
 }
 
+/* Project & Certificate Cards */
+.project-item,
+.certificate-item {
+    background-color: rgba(183, 75, 75, 0.05);
+    padding: 2rem; /* increased padding */
+    border-radius: 1.5rem;
+    box-shadow: 0 0 25px rgba(183, 75, 75, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 350px;   /* increased width */
+    text-align: center;
+}
+
+/* Hover effect */
+.project-item:hover,
+.certificate-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 35px rgba(183, 75, 75, 0.5);
+}
+
+/* Images and Videos */
+.project-item img,
+.project-item video,
+.certificate-item img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Headings */
+.project-item h3,
+.certificate-item h3 {
+    font-size: 1.8rem;  /* bigger text */
+    color: #b74b4b;
+    margin: 1rem 0;
+}
+
+/* Paragraphs */
+.project-item p,
+.certificate-item p {
+    font-size: 1.4rem;  /* larger text */
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+    color: #ddd;
+}
+
+/* Buttons */
+.project-btn,
+.view-cert-btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border: 2px solid #b74b4b;
+    background: black;
+    color: #b74b4b;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover,
+.view-cert-btn:hover {
+    background: #b74b4b;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Profile photo hover animation */
+.home-img img {
+    width: 280px; /* adjust size */
+    height: auto;
+    border-radius: 50%; /* makes it circular */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.home-img img:hover {
+    transform: scale(1.08); /* zoom in effect */
+    box-shadow: 0 0 35px rgba(183, 75, 75, 0.7); /* glowing border in #b74b4b */
+}
 
 /* Modal */
 .modal {
@@ -470,3 +553,26 @@ span {
         max-height: 25rem;
     }
 }
+
+/* 🔥 Universal Button Style + Hover Effect */
+.btn,
+.project-btn,
+.view-cert-btn,
+.skill-btn,
+.contact-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+.project-btn:hover,
+.view-cert-btn:hover,
+.skill-btn:hover,
+.contact-btn:hover {
+    background-color: #b74b4b;
+    color: black;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #b74b4b, 0 0 40px #b74b4b;
+}
+
