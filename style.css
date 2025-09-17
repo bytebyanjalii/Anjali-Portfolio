@@ -303,6 +303,32 @@ span {
     transform: scale(1.05);
 }
 
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Make bottom row (2 items) centered */
+.certificates-container .certificate-item:nth-last-child(-n+2) {
+  grid-column: span 1;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 900px) {
+  .certificates-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .certificates-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* Skills Section */
 .skills-container {
     display: flex;
@@ -355,6 +381,26 @@ span {
     color: black;
     transform: scale(1.05);
 }
+
+/* Skills Section Heading */
+.skills h2 {
+  text-align: center;
+  font-size: 2.5rem;   /* Bigger size */
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;         /* Or same as your theme color */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;   /* slightly bigger than normal */
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #b74b4b;      /* 🔥 custom color for headings */
+}
+
+
+
 
 /* Contact Section */
 .contact {
